@@ -8,3 +8,7 @@ RUN apt-get update && \
     -o APT::Intall-Recommend=false -o APT::Install-Suggests=false \
     python python-virtualenv 
 
+#Create virtual environment 
+RUN virtualenv /appenv && \
+. /appenv/bin/activate && \
+pip install pip --upgrade 
